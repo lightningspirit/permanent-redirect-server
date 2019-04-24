@@ -11,6 +11,6 @@ const server = http.createServer((req, res) => {
   res.end()
 })
 
-server.listen(port, 'localhost', () => {
+server.listen(port, () => {
   console.log(`Server running on port ${port}. Redirect to ${baseurl}`)
 })
