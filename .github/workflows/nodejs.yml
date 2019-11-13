@@ -22,7 +22,7 @@ jobs:
         npm ci
         npm run build --if-present
         PORT=30000 NEW_BASE_URL=http://example.com npm start &! CI_WEB_SERVER_PID=$!
-        npm test
+        PORT=30000 NEW_BASE_URL=http://example.com npm test
         kill $CI_WEB_SERVER_PID
       env:
         CI: true
